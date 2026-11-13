@@ -1,0 +1,27 @@
+name: Download LW8 media
+on:
+  push:
+    paths:
+      - '.github/workflows/lw8-media.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  download-media:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Download Pexels video and Pixabay clock audio
+        run: python3 scripts/fetch_lw8_media.py
+      - name: Commit downloaded media
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add assets/media
+          if git diff --cached --quiet; then
+            echo "No media downloaded."
+          else
+            git commit -m "LW8: add locally downloaded multimedia assets"
+            git push origin HEAD:main
+          fi
