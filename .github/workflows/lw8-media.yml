@@ -3,6 +3,7 @@ on:
   push:
     paths:
       - '.github/workflows/lw8-media.yml'
+      - 'scripts/fetch_lw8_media.py'
   workflow_dispatch:
 permissions:
   contents: write
