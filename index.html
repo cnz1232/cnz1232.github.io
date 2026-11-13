@@ -20,6 +20,8 @@
       <a href="#about" aria-label="About">A<span>About</span></a>
       <a href="#skills" aria-label="Skills">S<span>Skills</span></a>
       <a href="#resume" aria-label="Resume">R<span>Resume</span></a>
+      <a href="#portfolio" aria-label="Portfolio">P<span>Portfolio</span></a>
+      <a href="#services" aria-label="Services">S<span>Services</span></a>
     </nav>
   </header>
 
@@ -77,19 +79,133 @@
       <div class="section-heading">
         <h2>Resume</h2>
         <div class="line"></div>
+        <p>My education and practical experience in technology and business.</p>
       </div>
       <div class="resume-grid">
         <article>
+          <span class="year">2025 – Present</span>
           <h3>Education</h3>
           <h4>VILNIUS TECH</h4>
           <p class="muted">Artificial Intelligence Systems</p>
-          <p>Building foundations in programming, algorithms, engineering and artificial intelligence.</p>
+          <p>Studying programming, algorithms, data structures, engineering and artificial intelligence.</p>
         </article>
         <article>
-          <h3>Professional Focus</h3>
-          <h4>Web & Project Work</h4>
-          <p class="muted">Business analysis, automation and digital projects</p>
-          <p>Working across technical requirements, project coordination, research and web implementation.</p>
+          <span class="year">2026 – Present</span>
+          <h3>Work Experience</h3>
+          <h4>Web &amp; Project Leader</h4>
+          <p class="muted">Triarii Growth</p>
+          <p>Coordinating web development tasks and project workflows, aligning responsibilities and monitoring progress.</p>
+        </article>
+        <article>
+          <span class="year">2026</span>
+          <h3>Work Experience</h3>
+          <h4>Junior Business Analyst</h4>
+          <p class="muted">Triarii Growth</p>
+          <p>Supported research, reports, requirements and business processes before moving into web and project responsibilities.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="portfolio" class="section light">
+      <div class="section-heading">
+        <h2>Portfolio</h2>
+        <div class="line"></div>
+        <p>Visualizations recreated from my completed MATLAB Laboratory Work 4.</p>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card">
+          <img src="assets/img/matlab-lw4-sine-surface.svg" alt="Three-dimensional MATLAB surface showing sin of x squared plus y squared" loading="lazy">
+          <div class="portfolio-copy">
+            <h3>LW4: Sine Surface</h3>
+            <p>A three-dimensional representation of f(x,y) = sin(x² + y²), using a surface grid and a 50-degree viewing angle.</p>
+          </div>
+        </article>
+        <article class="portfolio-card">
+          <img src="assets/img/matlab-lw4-quadratic-surface.svg" alt="Three-dimensional MATLAB graph of a quadratic surface with a peak" loading="lazy">
+          <div class="portfolio-copy">
+            <h3>LW4: Quadratic Surface</h3>
+            <p>A surface plot of f(x,y) = 1 − 2x² − 3y², with a domain from −2 to 1 and a 60-degree viewing angle.</p>
+          </div>
+        </article>
+        <article class="portfolio-card">
+          <img src="assets/img/matlab-lw4-blue-surface.svg" alt="Semi-transparent blue three-dimensional paraboloid" loading="lazy">
+          <div class="portfolio-copy">
+            <h3>LW4: Transparent Blue Surface</h3>
+            <p>A semi-transparent blue surface of z = 1 − (x² + y²), based on the LW4 complementary exercise.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="services" class="section">
+      <div class="section-heading">
+        <h2>Services</h2>
+        <div class="line"></div>
+        <p>Example project services and illustrative prices for this CV exercise.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr><th>Service</th><th>Description</th><th>Price</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Website Development</td><td>Creation of simple responsive personal websites.</td><td>EUR 100</td></tr>
+            <tr><td>Data Visualization</td><td>Creating charts and visual summaries using MATLAB.</td><td>EUR 60</td></tr>
+            <tr><td>Process Analysis</td><td>Reviewing basic workflows and preparing a short report.</td><td>EUR 80</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="services-lists">
+        <article>
+          <h3>Technologies and tools</h3>
+          <ul>
+            <li>HTML and CSS
+              <ul>
+                <li>Semantic HTML tags</li>
+                <li>Responsive layouts</li>
+              </ul>
+            </li>
+            <li>MATLAB</li>
+            <li>Visual Studio Code</li>
+            <li>Git and GitHub</li>
+          </ul>
+        </article>
+        <article>
+          <h3>Website development steps</h3>
+          <ol>
+            <li>Gather requirements and prepare the page content.</li>
+            <li>Create the HTML structure and style with CSS.</li>
+            <li>Test in a browser and publish on GitHub Pages.</li>
+          </ol>
+        </article>
+      </div>
+
+      <h3 class="media-heading">Media Examples</h3>
+      <p>Examples of HTML media tags used in this laboratory.</p>
+      <div class="media-grid">
+        <article class="media-card">
+          <h4>HTML Video</h4>
+          <video controls playsinline preload="metadata" aria-label="Person typing using a computer keyboard">
+            <source src="assets/media/typing-keyboard.mp4" type="video/mp4">
+            <source src="https://videos.pexels.com/video-files/7534244/7534244-hd_1920_1080_25fps.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="media-credit"><a href="https://www.pexels.com/video/person-is-typing-using-computer-keyboard-7534244/" target="_blank" rel="noopener noreferrer">Video source: Pexels</a></p>
+        </article>
+        <article class="media-card">
+          <h4>YouTube Embed</h4>
+          <div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/BoUVIhtqjAw" title="YouTube video included in the LW8 assignment" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allowfullscreen></iframe></div>
+          <p class="media-credit"><a href="https://www.youtube.com/watch?v=BoUVIhtqjAw" target="_blank" rel="noopener noreferrer">Original YouTube video</a></p>
+        </article>
+        <article class="media-card">
+          <h4>HTML Audio</h4>
+          <p>Quartz clock ticking (one minute)</p>
+          <audio controls preload="none" aria-label="Quartz clock ticking one minute">
+            <source src="assets/media/quartz-clock-ticking.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+          </audio>
+          <p class="media-credit"><a href="https://pixabay.com/sound-effects/quartz-clock-ticking-one-minute-253102/" target="_blank" rel="noopener noreferrer">Audio source: Pixabay</a></p>
         </article>
       </div>
     </section>
