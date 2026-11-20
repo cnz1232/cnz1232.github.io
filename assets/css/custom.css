@@ -1,0 +1,88 @@
+/* Laboratory Work 9: a custom layer over the original template. */
+:root {
+  --accent: #08746d;
+  --dark: #172f3c;
+  --text: #354b56;
+  --light: #f1f7f5;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  line-height: 1.65;
+}
+h1, h2, h3, h4, h5, h6,
+.hero h1, .section-heading h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--dark);
+  line-height: 1.2;
+  letter-spacing: -.02em;
+}
+.hero h1 { font-size: clamp(3.2rem, 7vw, 6.7rem); }
+.section-heading h2 { font-size: clamp(2.2rem, 3vw, 3rem); }
+h3 { font-size: 1.45rem; }
+h4 { font-size: 1.1rem; }
+p { line-height: 1.8; margin: 0 0 1.1em; }
+.section-heading .line { width: 76px; height: 4px; border-radius: 4px; }
+
+a { color: #08665f; text-decoration: underline; text-underline-offset: .2em; }
+a:hover { color: #034b46; }
+a:focus-visible { outline: 3px solid #d88a31; outline-offset: 4px; }
+.primary-button {
+  background: #08746d;
+  color: #fff;
+  border: 2px solid #08746d;
+  border-radius: 999px;
+  padding: 13px 26px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(8, 116, 109, .22);
+  transition: background .2s, transform .2s, box-shadow .2s;
+}
+.primary-button:hover { background: #055b55; color: #fff; transform: translateY(-2px); }
+.primary-button:active { background: #034b46; transform: translateY(1px); box-shadow: none; }
+
+/* About, Resume and Portfolio spacing and content blocks. */
+#about, #resume, #portfolio { padding-top: 110px; padding-bottom: 110px; }
+#about .about-grid { gap: 56px; }
+#about .profile-wrap { padding: 10px; border: 1px solid #cbded9; border-radius: 24px; background: #fff; box-shadow: 0 16px 40px rgba(23, 47, 60, .12); }
+#about .profile-wrap img { border-radius: 16px; }
+#about .about-content { padding: 8px 0; }
+#about .facts { gap: 18px 28px; margin: 32px 0; }
+#about .facts div { padding: 4px 0 4px 15px; border-left: 3px solid var(--accent); }
+#resume .resume-grid, #portfolio .portfolio-grid { gap: 26px; }
+#resume .resume-grid article { padding: 30px; border: 1px solid #d4e5e0; border-top: 4px solid var(--accent); border-radius: 6px 6px 18px 18px; box-shadow: 0 12px 30px rgba(23, 47, 60, .07); }
+#portfolio .portfolio-card { border: 1px solid #d4e5e0; border-radius: 20px; box-shadow: 0 14px 32px rgba(23, 47, 60, .09); }
+#portfolio .portfolio-copy { padding: 26px; }
+#portfolio .portfolio-copy h3 { font-size: 1.25rem; }
+
+/* Two additional components: side navigation and media cards. */
+.side-nav nav { gap: 8px; padding: 8px; background: rgba(255, 255, 255, .94); border: 1px solid #d4e5e0; border-radius: 18px; box-shadow: 0 8px 25px rgba(23, 47, 60, .12); }
+.side-nav a { width: 44px; height: 44px; border-radius: 12px; background: #edf5f2; color: var(--dark); text-decoration: none; }
+.side-nav a:hover, .side-nav a.active { background: #08746d; color: #fff; }
+.media-card { padding: 25px; border: 1px solid #cfe2dc; border-radius: 18px; background: #f5faf8; box-shadow: 0 8px 22px rgba(23, 47, 60, .07); }
+.media-card h4 { padding-bottom: 12px; border-bottom: 2px solid #b8d9cf; }
+.media-card video, .video-frame iframe { border-radius: 12px; }
+
+/* LW8 lists: custom markers, counters, and a distinct nested list. */
+.services-lists article { background: #f8fbfa; border-color: #d4e5e0; border-radius: 18px; }
+.services-lists ul, .services-lists ol { list-style: none; padding-left: 0; }
+.services-lists article > ul > li { position: relative; padding-left: 26px; }
+.services-lists article > ul > li::before { content: ""; position: absolute; left: 2px; top: .7em; width: 9px; height: 9px; border-radius: 50%; background: #08746d; }
+.services-lists li ul { margin: 8px 0 14px; padding: 8px 14px; border-left: 2px solid #9dcbbd; background: #eaf4f0; }
+.services-lists li ul li::before { content: "—"; color: #08746d; margin-right: 9px; }
+.services-lists ol { counter-reset: steps; }
+.services-lists ol li { counter-increment: steps; display: flex; align-items: baseline; gap: 12px; margin: 12px 0; }
+.services-lists ol li::before { content: counter(steps, decimal-leading-zero); flex: 0 0 auto; color: #08746d; font-weight: 700; }
+
+/* LW8 table. */
+.table-scroll { border-color: #cfe2dc; border-radius: 16px; }
+table { text-align: center; }
+th, td { padding: 17px 20px; text-align: center; border-bottom: 1px solid #dceae5; }
+th { background: #174b48; color: #fff; letter-spacing: .04em; }
+tbody tr:nth-child(even) { background: #edf6f2; }
+tbody tr:hover { background: #dcefe8; }
+
+@media (max-width: 800px) {
+  #about, #resume, #portfolio { padding: 75px 24px; }
+  #about .about-grid { gap: 30px; }
+}
