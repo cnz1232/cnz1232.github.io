@@ -20,6 +20,7 @@
       <a href="#home" class="active" aria-label="Home">H<span>Home</span></a>
       <a href="#about" aria-label="About">A<span>About</span></a>
       <a href="#skills" aria-label="Skills">S<span>Skills</span></a>
+      <a href="#skill-progress" aria-label="Skill progress board" title="Skill progress board">B<span>Skill progress board</span></a>
       <a href="#resume" aria-label="Resume">R<span>Resume</span></a>
       <a href="#portfolio" aria-label="Portfolio">P<span>Portfolio</span></a>
       <a href="#services" aria-label="Services">S<span>Services</span></a>
@@ -39,9 +40,12 @@
     </section>
 
     <section id="about" class="section">
-      <div class="section-heading">
-        <h2>About</h2>
-        <div class="line"></div>
+      <div class="section-heading about-heading">
+        <div>
+          <h2>About</h2>
+          <div class="line"></div>
+        </div>
+        <div class="about-shapes" aria-hidden="true"></div>
       </div>
       <div class="about-grid">
         <div class="profile-wrap">
@@ -67,12 +71,62 @@
       <div class="section-heading">
         <h2>Skills</h2>
         <div class="line"></div>
+        <p><a href="#skill-progress">View my skill progress board</a></p>
       </div>
       <div class="skill-grid">
         <article><h3>MATLAB</h3><p>Scripts, matrices, plotting and laboratory assignments.</p></article>
         <article><h3>C++</h3><p>Procedural programming and data structures.</p></article>
         <article><h3>HTML</h3><p>Semantic page structure and basic front-end development.</p></article>
         <article><h3>Business Analysis</h3><p>Requirements, research, reporting and process improvement.</p></article>
+      </div>
+    </section>
+
+    <section id="skill-progress" class="section" aria-labelledby="progress-title">
+      <div class="section-heading">
+        <h2 id="progress-title">Skill progress board</h2>
+        <div class="line"></div>
+      </div>
+      <div class="progress-overview">
+        <div class="xp-panel">
+          <dl class="xp-summary">
+            <div><dt>Earned XP</dt><dd>120 XP</dd></div>
+            <div><dt>Level</dt><dd>2</dd></div>
+            <div><dt>Rank</dt><dd>Trainee</dd></div>
+          </dl>
+          <label for="xp-progress">Next level: Specialist <span>120 / 150 XP</span></label>
+          <progress id="xp-progress" value="120" max="150">80%</progress>
+        </div>
+        <div class="skill-stats">
+          <h3>Skill statistics</h3>
+          <dl>
+            <div><dt>Total skills</dt><dd>6</dd></div>
+            <div><dt>Completed skills</dt><dd>2</dd></div>
+            <div><dt>Completion rate</dt><dd>33%</dd></div>
+          </dl>
+        </div>
+      </div>
+      <div class="kanban-board">
+        <section class="skill-column planned">
+          <h3>Planned</h3>
+          <ul>
+            <li><h4>Model evaluation</h4><span>Planned</span><strong>70 XP</strong></li>
+            <li><h4>Workflow automation</h4><span>Planned</span><strong>70 XP</strong></li>
+          </ul>
+        </section>
+        <section class="skill-column in-progress">
+          <h3>In Progress</h3>
+          <ul>
+            <li><h4>Data cleaning</h4><span>In Progress</span><strong>50 XP</strong></li>
+            <li><h4>C++ data structures</h4><span>In Progress</span><strong>50 XP</strong></li>
+          </ul>
+        </section>
+        <section class="skill-column completed">
+          <h3>Completed</h3>
+          <ul>
+            <li><h4>MATLAB visualization</h4><span>Completed</span><strong>60 XP</strong></li>
+            <li><h4>Semantic HTML</h4><span>Completed</span><strong>60 XP</strong></li>
+          </ul>
+        </section>
       </div>
     </section>
 

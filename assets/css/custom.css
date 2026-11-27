@@ -86,3 +86,179 @@ tbody tr:hover { background: #dcefe8; }
   #about, #resume, #portfolio { padding: 75px 24px; }
   #about .about-grid { gap: 30px; }
 }
+
+/* Laboratory Work 10: skill progress board. */
+#skill-progress {
+  background: #f9fbfa;
+}
+.progress-overview,
+.kanban-board {
+  display: grid;
+  gap: 18px;
+}
+.progress-overview {
+  grid-template-columns: minmax(0, 2fr) minmax(220px, 1fr);
+  margin-bottom: 24px;
+}
+.xp-panel,
+.skill-stats,
+.skill-column {
+  padding: clamp(16px, 2vw, 28px);
+  border-radius: 18px;
+}
+.xp-panel {
+  background: #164a47;
+  color: #fff;
+}
+.xp-summary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px clamp(16px, 4vw, 64px);
+  margin: 0 0 22px;
+}
+.xp-summary dt {
+  color: #c4e3dd;
+}
+.xp-summary dd {
+  margin: 0;
+  font: bold clamp(1.4rem, 2.5vw, 2.2rem) Georgia, serif;
+}
+.xp-panel label,
+.skill-stats dl div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+}
+#xp-progress {
+  display: block;
+  width: 100%;
+  height: 12px;
+  margin-top: 8px;
+  appearance: none;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #416965;
+}
+#xp-progress::-webkit-progress-bar { background: #416965; }
+#xp-progress::-webkit-progress-value { background: #9de4ca; }
+#xp-progress::-moz-progress-bar { background: #9de4ca; }
+.skill-stats {
+  background: #fff;
+  border: 1px solid #cfdfd9;
+}
+.skill-stats h3,
+.skill-column h3 {
+  margin: 0 0 12px;
+}
+.skill-stats dl,
+.skill-stats dd {
+  margin: 0;
+}
+.skill-stats dd,
+.skill-column strong {
+  color: var(--dark);
+  font-variant-numeric: tabular-nums;
+}
+.skill-stats dd {
+  font-weight: 700;
+}
+.kanban-board {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.planned { --column-bg: #edf1f5; --status-color: #495d75; }
+.in-progress { --column-bg: #f8f1e4; --status-color: #805910; }
+.completed { --column-bg: #e6f3ed; --status-color: #23614d; }
+.skill-column {
+  background: var(--column-bg);
+  border-top: 3px solid var(--status-color);
+}
+.skill-column ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.skill-column li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 12px 8px;
+  padding: 16px;
+  background: #fff;
+  border-radius: 10px;
+}
+.skill-column h4 {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+.skill-column span {
+  color: var(--status-color);
+  font-size: .875rem;
+}
+@media (max-width: 800px) {
+  .progress-overview,
+  .kanban-board {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Two animated CSS shapes beside the About heading. */
+.about-heading,
+.about-shapes {
+  display: flex;
+  align-items: center;
+}
+.about-heading {
+  justify-content: space-between;
+  gap: 12px;
+}
+.about-shapes {
+  gap: 14px;
+  padding: 8px;
+}
+.about-shapes::before,
+.about-shapes::after {
+  content: "";
+  display: block;
+}
+.about-shapes::before {
+  width: 32px;
+  height: 32px;
+  border: 5px solid #76ada2;
+  border-radius: 50%;
+  animation: float-ring 3s ease-in-out infinite alternate;
+}
+.about-shapes::after {
+  width: 28px;
+  height: 28px;
+  background: #d9a352;
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  animation: turn-triangle 12s linear infinite;
+}
+@keyframes float-ring {
+  from { transform: translateY(-4px); }
+  to { transform: translateY(4px); }
+}
+@keyframes turn-triangle {
+  to { transform: rotate(360deg); }
+}
+
+#services {
+  background: linear-gradient(110deg, #e2f3ec, #f8f5e9, #dceef4);
+  background-size: 240% 100%;
+  animation: services-gradient 10s ease-in-out infinite alternate;
+}
+@keyframes services-gradient {
+  from { background-position: 0% 50%; }
+  to { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #services,
+  .about-shapes::before,
+  .about-shapes::after {
+    animation: none;
+  }
+}
